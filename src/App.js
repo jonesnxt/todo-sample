@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Search from './components/Search';
+import ItemsList from './components/ItemsList';
+
+export const Body = styled.div`
+  background-color: #F6FAFF;
+  height: 100%;
+  widgth: 100%;
+
+`;
+
+const App = () => (
+  <Body className="App">
+    <Search />
+    <ItemsList />
+  </Body>
+);
 
 export default App;
